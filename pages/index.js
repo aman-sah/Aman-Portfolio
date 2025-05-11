@@ -223,10 +223,10 @@ export default function Home({ publications }) {
         }`}
       >
         <Head>
-          <title>Daniel Cranney | Frontend Developer & Designer</title>
+          <title>Aman Sah | Frontend Developer & Designer</title>
           <meta
             name="description"
-            content="The portfolio of frontend developer and designer, Daniel Cranney"
+            content="The portfolio of frontend developer and designer, Aman Sah"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -369,7 +369,7 @@ export default function Home({ publications }) {
             {/* Text */}
             <div className="flex items-center ml-4">
               <p className="text-lg font-semibold font-display tracking-tight dark:text-white text-darker mb-0 transition-all duration-150 ease-in-out">
-                Daniel Cranney
+                Aman Sah
               </p>
             </div>
             {/* Nav */}
@@ -522,7 +522,7 @@ export default function Home({ publications }) {
                 </span> */}
 
                 <h1 className="mb-2 text-5xl md:text-7xl dark:text-white text-dark">
-                  Daniel Cranney
+                  Aman Sah
                 </h1>
                 <h2 className="mb-4 text-3xl md:text-4xl dark:text-light text-mid">
                   <ReactTypingEffect
@@ -531,10 +531,10 @@ export default function Home({ publications }) {
                     eraseSpeed={30}
                     eraseDelay={1500}
                     text={[
-                      "Developer Advocate",
-                      "Developer",
-                      "Public Speaker",
-                      `Cat Dad`,
+                      "Frontend Developer",
+                      "Frontend Developer",
+                      "Frontend Developer",
+                      `Frontend Developer`,
                     ]}
                   />
                 </h2>
@@ -566,38 +566,19 @@ export default function Home({ publications }) {
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                    Hi! I&apos;m Dan and I&apos;m a frontend developer, designer
-                    and teacher from Bristol, England.
+                    Hi! I&apos;m Aman and I&apos;m a frontend developer, designer from Bihar, India.
                   </p>
                   <p className="text-lg">
-                    After building my first website aged thirteen, I knew I
-                    wanted to work with computers and technology, and I&apos;ve
-                    never looked back.
+                    Currently, I&apos;m studying at Chitkara University. I built my first website at the age of thirteen and since then, I&apos;ve been passionate about working with computers and technology.
                   </p>
                   <p className="text-lg">
-                    After graduating University with a Media degree, I began
-                    freelancing as a designer, creating graphics, video content
-                    and websites for small businesses, using content management
-                    systems like Wordpress, Joomla and Squarespace.
+                  As a fresher, I&apos;m eager to apply my knowledge and skills in real-world projects. I&apos;ve been focusing on programming, building a solid frontend stack, and creating exciting projects that solve real-world problems.
                   </p>
                   <p className="text-lg">
-                    In recent years, I&apos;ve been focused on programming,
-                    building a solid frontend stack and creating exciting
-                    projects that solve real-world problems.
+                  I&apos;m constantly learning and keeping up with the latest trends in web development and design. Whether it&apos;s through online courses, tutorials, or personal projects, I am committed to expanding my skill set and delivering high-quality work.
                   </p>
                   <p className="text-lg">
-                    Alongside my design and development work, I run a BA Media
-                    Production degree course and a corporate video production
-                    company called{" "}
-                    <a
-                      href="http://www.wearespotlight.co.uk"
-                      target="_blank"
-                      className="underline-link"
-                      rel="noreferrer"
-                    >
-                      Spotlight Media
-                    </a>
-                    , so I like to keep busy!
+                  In addition to my technical skills, I have a keen interest in UI/UX design, ensuring that my projects are not only functional but also visually appealing and user-friendly. My goal is to create impactful digital experiences that delight users and make a difference.
                   </p>
                   <p className="text-lg">
                     Take a look at my work below to see what I&apos;m working
@@ -805,7 +786,7 @@ export default function Home({ publications }) {
               />
 
               {/* Bootstrap */}
-              {/* <Icon
+              {<Icon
                 IconType={Bootstrap}
                 title="Bootstrap"
                 width={"w-16"}
@@ -818,7 +799,7 @@ export default function Home({ publications }) {
                 marginRight={"mr-0"}
                 textTransform={"normal-case"}
                 fixedHeight={"h-28"}
-              /> */}
+              /> }
 
               {/* Firebase */}
               <Icon
@@ -885,7 +866,7 @@ export default function Home({ publications }) {
               />
 
               {/* Adobe XD */}
-              <Icon
+              {/*<Icon
                 IconType={AdobeXd}
                 title="Adobe XD"
                 width={"w-16"}
@@ -898,7 +879,7 @@ export default function Home({ publications }) {
                 marginRight={"mr-0"}
                 textTransform={"normal-case"}
                 fixedHeight={"h-28"}
-              />
+              />*/}
             </div>
           </section>
 
@@ -916,16 +897,17 @@ export default function Home({ publications }) {
             <div className="flex flex-col w-full mb-12">
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Smylo"}
-                status={"Join the Waitlist"}
-                description={`Keep your life on track and never miss another important date again`}
+                title={"YourSpace"}
+                status={"Find Your Home"}
+                description={`Discover your dream home effortlessly with our expert real estate services. Buy, sell, or rent with confidence.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/smylo.png"}
-                liveLink={"https://smylo.co/"}
-                repoLink={null}
+                imgSrc={"/projects/yourSpace.png"}
+                
+                liveLink={"https://your-space-yc45.onrender.com/"}
+                repoLink={"https://github.com/aman-sah/your_space"}
                 stack={
                   <>
                     <Icon
@@ -1012,16 +994,16 @@ export default function Home({ publications }) {
               />
               {/* Project Two */}
               <FeaturedProjectCard
-                title={"ColorHub"}
-                status={"V2 Just Launched"}
-                description={`Find the perfect palette for your next perfect. pick it, preview it and paste it right into your code.`}
+                title={"Sehat Saathi"}
+                status={"Track Your Health"}
+                description={`Monitor and manage your health with ease. Get insights and stay on top of your wellness journey.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/colorhub.png"}
-                liveLink={"https://colorhub.app/"}
-                repoLink={null}
+                imgSrc={"/projects/sehatSaathi.png"}
+                liveLink={"https://sehat-saathi.vercel.app/"}
+                repoLink={"https://github.com/aman-sah/sehat-saathi"}
                 stack={
                   <>
                     <Icon
@@ -1092,16 +1074,16 @@ export default function Home({ publications }) {
               />
               {/* Project Three */}
               <FeaturedProjectCard
-                title={"ProfileMe.dev"}
-                status={"Open Source"}
-                description={`Create an amazing GitHub profile complete with skills icons, stat graphs and more in just a couple of minutes.`}
+                title={"CineStream"}
+                status={"Stream, Watch, Enjoy"}
+                description={`Discover, stream, and enjoy the latest movies and classics all in one place.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/profileme.png"}
-                liveLink={"https://profileme.dev"}
-                repoLink={"https://github.com/danielcranney/profileme.dev"}
+                imgSrc={"/projects/cineStream.png"}
+                liveLink={"https://aman-sah.github.io/Movie-App/"}
+                repoLink={"https://github.com/hey-aman/50ProjectsIn50Days/commit/c966c100a71bcfbb49c120c447a9eb8ddb25c4a4"}
                 stack={
                   <>
                     <Icon
@@ -1220,7 +1202,7 @@ export default function Home({ publications }) {
                     href="mailto:danielcranney@gmail.com"
                     className="underline-link"
                   >
-                    danielcranney@gmail.com
+                    amansah2181@gmail.com
                   </Link>{" "}
                   and let&apos;s talk about your project!
                 </p>
@@ -1260,8 +1242,7 @@ export default function Home({ publications }) {
 
             <div className="flex flex-col items-start md:flex-row">
               <p className="w-auto mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} - Designed and built by Daniel
-                Cranney
+                &copy; {new Date().getFullYear()} - Designed and built by Aman Sah
               </p>
 
               <div className="flex md:hidden">
