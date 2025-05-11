@@ -906,7 +906,7 @@ export default function Home({ publications }) {
                 imgHeight={"666"}
                 imgSrc={"/projects/yourSpace.png"}
                 
-                liveLink={"https://your-space-yc45.onrender.com/"}
+                liveLink={"https://your-space-zeta.vercel.app/"}
                 repoLink={"https://github.com/aman-sah/your_space"}
                 stack={
                   <>
