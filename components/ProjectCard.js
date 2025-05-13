@@ -4,7 +4,7 @@ import GitHub from "./icons/GitHub";
 import Button from "./Button";
 
 const ProjectCard = ({ project }) => {
-  const { title, overview, stack, link, repo, isSiteLive } = project;
+  const { title,overview,stack, link, repo, isSiteLive } = project;
 
   return (
     <div className="flex flex-col w-full rounded-md bg-white dark:bg-dark/20 px-7 py-7 shadow-md shadow-light/10 dark:shadow-darker">

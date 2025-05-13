@@ -973,7 +973,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Supabase}
+                      IconType={MongoDb}
                       title="Supabase"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1067,6 +1067,22 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
+
+                     <Icon
+                      IconType={MongoDb}
+                      title="Supabase"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
                   </>
                 }
               />
@@ -1101,7 +1117,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Tailwind}
+                      IconType={Css}
                       title="Tailwind"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1117,7 +1133,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={ReactJs}
+                      IconType={Javascript}
                       title="React"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1133,7 +1149,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={NextJs}
+                      IconType={MongoDb}
                       title="Next"
                       columnSizing={"w-auto"}
                       width={"w-6"}
