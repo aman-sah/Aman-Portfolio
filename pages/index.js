@@ -24,11 +24,14 @@ import AdobeXd from "../components/icons/AdobeXd";
 import Supabase from "../components/icons/Supabase";
 import MongoDb from "../components/icons/MongoDb";
 import Express from "../components/icons/Express";
+
 // Project Card
 import ProjectCard from "../components/ProjectCard";
 import GitHubProfile from "../components/icons/GitHubProfile";
 import TwitterProfile from "../components/icons/TwitterProfile";
 import LinkedInProfile from "../components/icons/LinkedInProfile";
+import DiscordProfile from "../components/icons/DiscordProfile";
+import InstagramProfile from "../components/icons/InstagramProfile";
 import FeaturedProjectCard from "../components/FeaturedProjectCard";
 
 // Blog Components
@@ -233,8 +236,8 @@ export default function Home({ publications }) {
         {/* Full-screen Menu */}
         <div
           className={`fixed w-full z-50 h-screen pt-24 bg-white dark:bg-darker bg-opacity-100 transform delay-100 transition-all duration-150 ${navbarOpen
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-full"
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-full"
             }`}
         >
           <div className="container relative mx-auto">
@@ -244,8 +247,8 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "home"
-                        ? "selected delay-200"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
+                      ? "selected delay-200"
+                      : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -259,8 +262,8 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "about"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
+                      ? "current"
+                      : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -274,8 +277,8 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "skills"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
+                      ? "current"
+                      : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -289,8 +292,8 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "my-work"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid  hover:text-mid border-b-2 border-transparent"
+                      ? "current"
+                      : "dark:text-light dark:hover:text-white text-mid  hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -306,8 +309,8 @@ export default function Home({ publications }) {
                     target="_blank"
                     rel="noreferrer"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "blog"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
+                      ? "current"
+                      : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -321,8 +324,8 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${visibleSection === "contact"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
+                      ? "current"
+                      : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                       }`}
                     onClick={() => {
                       setNavbarOpen(false);
@@ -348,8 +351,9 @@ export default function Home({ publications }) {
         {/* Header and Nav */}
         <header
           ref={headerRef}
-          className={`header top-0 mx-auto flex items-center z-50 fixed w-full transition-all duration-150 h-20 ease-in-out ${scrolling ? "-translate-y-full" : ""
-            } ${scrolling && !navbarOpen ? "dark:bg-darker" : "dark:bg-darker"}`}
+          // className={`header top-0 mx-auto flex items-center z-50 fixed w-full transition-all duration-150 h-20 ease-in-out ${scrolling ? "-translate-y-full" : ""
+          //   } ${scrolling && !navbarOpen ? "dark:bg-darker" : "dark:bg-darker"}`}
+          className={`header top-0 mx-auto flex items-center z-50 fixed w-full transition-all duration-150 h-20 ease-in-out dark:bg-darker`}
         >
           {/* Logo and Nav container */}
           <div className="container relative flex items-center mx-auto">
@@ -364,7 +368,7 @@ export default function Home({ publications }) {
               </p>
             </div>
             {/* Nav */}
-            <nav className="block ml-auto h-full">
+            <nav className=" sticky block ml-auto h-full">
               <ul className="z-50 flex items-center">
                 <li className="z-50 hidden mx-5 list-none lg:inline-block">
                   <button
@@ -414,22 +418,6 @@ export default function Home({ publications }) {
                     My Work
                   </button>
                 </li>
-                {/* <li className="z-50 hidden mx-5 list-none lg:inline-block">
-                  <button
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`nav-item ${
-                      visibleSection === "blog" ? "current" : "active"
-                    }`}
-                    onClick={() => {
-                      scrollTo(blogRef.current);
-                    }}
-                  >
-                    Blog
-                  </button>
-                </li> */}
-
 
 
                 <li className="z-50 hidden mx-5 list-none lg:inline-block">
@@ -468,8 +456,8 @@ export default function Home({ publications }) {
                 <li className="z-50 inline-block list-none lg:hidden group">
                   <button
                     className={`relative w-10 h-10 ${navbarOpen
-                        ? "dark:text-white text-dark"
-                        : "text-mid group-hover:text-dark dark:opacity-50 dark:group-hover:opacity-100 dark:text-white dark:group-hover:text-white"
+                      ? "dark:text-white text-dark"
+                      : "text-mid group-hover:text-dark dark:opacity-50 dark:group-hover:opacity-100 dark:text-white dark:group-hover:text-white"
                       } focus:outline-none`}
                     onClick={() => setNavbarOpen(!navbarOpen)}
                   >
@@ -1068,7 +1056,7 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
 
-                     <Icon
+                    <Icon
                       IconType={MongoDb}
                       title="Supabase"
                       columnSizing={"w-auto"}
@@ -1183,46 +1171,100 @@ export default function Home({ publications }) {
             </div>
           </section>
 
-          {/* Blog */}
-          {/* <section
+          <section
+            id="github"
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
-            id="blog"
-            ref={blogRef}
           >
-            <h2 className="text-5xl">Blog</h2>
-            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
+            <h2 className="text-3xl">My GitHub Contributions</h2>
+            <hr className="bg-brand w-40 h-1.5 mt-4 mb-10 border-0" />
 
-            <BlogList publications={publications} />
-          </section> */}
+            <div className="flex flex-col items-center gap-8">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+                <img
+                  src="https://github-readme-streak-stats-salesp07.vercel.app/?user=aman-sah&count_private=true&theme=react&border_radius=10"
+                  alt="GitHub Streak Stats"
+                  className="rounded-lg shadow-md"
+                />
+                <img
+                  src="https://github-readme-stats-salesp07.vercel.app/api?username=aman-sah&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10"
+                  alt="GitHub Readme Stats"
+                  className="rounded-lg shadow-md"
+                />
+              </div>
+              <div className="mt-6">
+                <img
+                  src="https://ghchart.rshah.org/aman-sah"
+                  alt="GitHub Contributions Calendar"
+                  className="w-full max-w-4xl mx-auto"
+                />
+              </div>
+            </div>
+          </section>
 
-          {/* Contact */}
+         
+
+
+
           <section
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
             id="contact"
             ref={contactRef}
           >
-            <h2 className="text-5xl">Contact</h2>
-            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
+            <h2 className="text-4xl">Get In Touch</h2>
+            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0" />
 
-            <div className="flex flex-col-reverse w-full md:flex-row">
-              <div className="w-full mb-4 md:pl-0 md:mb-0">
-                <p className="text-lg">
-                  I&apos;m currently available to get involved in new projects,
-                  so get in touch if you&apos;d like to work together.
-                </p>
-                <p className="text-lg">
-                  Email me at{" "}
-                  <Link
-                    href="mailto:danielcranney@gmail.com"
-                    className="underline-link"
-                  >
+            <div className="flex flex-col-reverse w-full gap-8 md:flex-row">
+              {/* Contact Info */}
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl font-semibold mb-4 mt-2">Contact Information</h3>
+                <p className="mb-2 flex items-center">
+                  <i className="fas fa-envelope mr-2 text-brand" />
+                  <a href="mailto:ashutoshkumarsah41@gmail.com" className="underline-link">
                     amansah2181@gmail.com
-                  </Link>{" "}
-                  and let&apos;s talk about your project!
+                  </a>
+                </p>
+                <p className="mb-4 flex items-center">
+                  <i className="fas fa-phone mr-2 text-brand" />
+                  +91 9534940053
                 </p>
               </div>
+
+              {/* Contact Form */}
+              <form className="w-full md:w-1/2 space-y-4 mt-3">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand dark:bg-dark dark:text-white"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand dark:bg-dark dark:text-white"
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    placeholder="Your Message"
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-brand dark:bg-dark dark:text-white"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-brand px-6 py-3 rounded-md text-white bg-brand hover:bg-brand-dark transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </section>
+
 
           {/* Footer */}
           <footer className="flex flex-col w-full px-0 py-16 md:px-20 lg:px-24 section">
@@ -1266,9 +1308,10 @@ export default function Home({ publications }) {
                 <span className="mr-2">
                   <TwitterProfile marginBottom={"mb-0"} />
                 </span>
-                <span className="mr-2">
+                {/* <span className="mr-2">
                   <LinkedInProfile marginBottom={"mb-0"} />
                 </span>
+                */}
               </div>
             </div>
           </footer>
@@ -1282,6 +1325,9 @@ export default function Home({ publications }) {
               <GitHubProfile marginBottom={"mb-4"} />
               <TwitterProfile marginBottom={"mb-4"} />
               <LinkedInProfile marginBottom={"mb-4"} />
+              <DiscordProfile marginBottom={"mb-4"} />
+              <InstagramProfile marginBottom={"mb-4"}/>
+              
               <div className="w-0.5 dark:bg-white bg-dark h-24 opacity-20 mt-2"></div>
             </div>
 
@@ -1297,8 +1343,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "home"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1308,16 +1354,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "home"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "home"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
@@ -1333,8 +1379,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "about"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1344,16 +1390,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "about"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "about"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
@@ -1369,8 +1415,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "skills"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1380,16 +1426,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "skills"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "skills"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
@@ -1405,8 +1451,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "my-work"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1416,16 +1462,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "my-work"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "my-work"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
@@ -1441,8 +1487,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "blog"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1452,16 +1498,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "blog"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "blog"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
@@ -1477,8 +1523,8 @@ export default function Home({ publications }) {
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
                   className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${visibleSection === "contact"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
+                    ? "rotate-45 scale-110"
+                    : "rotate-0 scale-100"
                     }`}
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1488,16 +1534,16 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${visibleSection === "contact"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
+                      ? "dark:text-white text-mid rotate-90"
+                      : "dark:text-dark text-light rotate-0"
                       }`}
                     d="M5.64 5.64h12.73v12.73H5.64z"
                   />
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${visibleSection === "contact"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
+                      ? "dark:text-white text-dark rotate-45 opacity-100"
+                      : "dark:text-white text-light rotate-45"
                       }`}
                     d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
                   />
