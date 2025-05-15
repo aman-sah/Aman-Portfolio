@@ -1171,7 +1171,7 @@ export default function Home({ publications }) {
             </div>
           </section>
 
-          <section
+          {/* <section
             id="github"
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
           >
@@ -1199,7 +1199,52 @@ export default function Home({ publications }) {
                 />
               </div>
             </div>
-          </section>
+          </section> */}
+
+
+<section
+  id="github"
+  className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
+>
+  <h2 className="text-3xl">My GitHub Contributions</h2>
+  <hr className="bg-brand w-40 h-1.5 mt-4 mb-10 border-0" />
+
+  <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+      <div className="relative w-[420px] h-[200px]">
+        <Image
+          // src="https://github-readme-streak-stats-salesp07.vercel.app/?user=aman-sah&count_private=true&theme=react&border_radius=10"
+          src="/projects/git1.png"
+          alt="GitHub Streak Stats"
+          fill
+          className="rounded-lg shadow-md object-contain"
+          unoptimized
+        />
+      </div>
+      <div className="relative w-[420px] h-[200px]">
+        <Image
+          // src="https://github-readme-stats-salesp07.vercel.app/api?username=aman-sah&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10"
+         src="/projects/git2.png"
+
+          alt="GitHub Readme Stats"
+          fill
+          className="rounded-lg shadow-md object-contain"
+          unoptimized
+        />
+      </div>
+    </div>
+    <div className="mt-6 relative w-full max-w-4xl h-[200px]">
+      <Image
+        // src="https://ghchart.rshah.org/aman-sah"
+        src="/projects/git3.png"
+        alt="GitHub Contributions Calendar"
+        fill
+        className="mx-auto object-contain"
+        unoptimized
+      />
+    </div>
+  </div>
+</section>
 
          
 
